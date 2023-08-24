@@ -1,0 +1,122 @@
+
+body{
+    font-family: Roboto,sans-serif;
+  }
+  
+  h1{
+    font-weight: 600;
+    color:#023b6d;
+    text-align: center;
+  }
+  h2{
+    font-weight: 600;
+    color:#023b6d;
+  
+  }
+  .template-card {
+   height: 100%;
+    }
+  .template-card:hover {
+      box-shadow: 0 0 40px rgba(2,59,109,.1);
+  }
+  .nav-link:hover{
+    color:black;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .hero{
+    padding: 10rem 2rem;
+  }
+  footer{
+    width:100%;
+     float:bottom;
+  }
+  .template-card .buttons{
+    text-align: center;
+  }
+  .template-card .buttons a{
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 3px;
+    border:1px solid #eee;
+    border-radius: 3px;
+    padding: 8px 20px;
+    color: #023b6d;
+    justify-content: center;
+  }
+  a{
+    text-decoration: none;
+    color: #023b6d;
+  }
+  .col-12{
+    margin-bottom: 5rem;
+    border:1px solid #eee;
+    padding-top:10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 80px;
+    width: 80%;
+    background-color: cadetblue;
+    animation-name: example;
+   animation-duration: 1s;
+   animation-timing-function:ease-in-out;
+  }
+    @keyframes example {
+    0%{background-color: green;}
+    50%{background-color:cadetblue ;}
+    100%{background-color:grey;}
+  }
+  
+  .picture img{
+    float: right;
+    margin:10px;
+    width: 220px;
+    height: 300px;
+    border-radius: 3px;
+  }
+  
+  h3{
+    color:#023b6d;
+    font-weight: 600;
+  }
+  .newsletter{
+    margin:5% 20%;
+  }
+  .contactusform{
+    display: flex;
+    margin-top:8%;
+    justify-content: center;
+    background-color:cadetblue;
+  }
+  .services{
+    margin-top:15%;
+    margin-left: 15%;
+  
+  }
+  /* media queries for smaller screens */
+  @media screen and (max-width: 600px){
+    .hero{
+      padding: 8rem 2rem;
+    }
+  }
+  
+  @media screen and (max-width:600px){
+    .col-12{
+      background-color: #FAEBD7;
+    }
+  }
+  
+  @media screen and (max-width:770px){
+    .picture{
+      margin-left:130%;
+    }
+  }
+  
+  @media screen and (max-width:770px){
+    .picture img{
+      width:150px;
+      height:200px;
+    }
+  }
