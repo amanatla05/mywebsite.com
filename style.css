@@ -1,0 +1,310 @@
+#img1,
+#img2,
+#img3 {
+  height: 220.42px;
+}
+.projects
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  color: #023b6d;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+  color: #023b6d;
+}
+
+.template-card {
+  padding: 3rem;
+}
+
+.template-card:hover {
+  box-shadow: 0 0 40px rgba(2, 59, 109, .1);
+}
+
+.nav-link:hover {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.hero {
+  padding: 10rem 2rem;
+}
+
+footer {
+  width: 100%;
+  float: bottom;
+}
+
+.template-card .buttons {
+  text-align: center;
+}
+
+.template-card .buttons a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 3px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 8px 20px;
+  color: #023b6d;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #023b6d;
+}
+
+.col-12 {
+  margin-bottom: 5rem;
+  border: 1px solid #eee;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 80px;
+  width: 80%;
+  background-color: cadetblue;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  transform-origin: left center;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+@keyframes example {
+  0% {
+    background-color: green;
+  }
+
+  50% {
+    background-color: cadetblue;
+  }
+
+  100% {
+    background-color: grey;
+  }
+}
+
+#mode-toggle {
+  position: absolute;
+  margin-top: 12%;
+  margin-left: 4%;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+  transition: all 0.4s ease-in;
+}
+
+.toggle-switch {
+  position: absolute;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.13rem;
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-inline: auto;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  transition: all 0.4s ease-in;
+  border-radius: 2.13rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.63rem;
+  width: 1.63rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #b62e2e;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 2px #2196f3;
+}
+
+input:checked+.slider::before {
+  transform: translateX(1.63rem);
+}
+
+.mode-status {
+  position: absolute;
+  margin-top: 10%;
+  color: brown;
+  font-size: 15px;
+}
+
+.picture img {
+  float: right;
+  margin: 10px;
+  width: 220px;
+  height: 300px;
+  border-radius: 3px;
+}
+
+h3 {
+  color: #023b6d;
+  font-weight: 600;
+}
+
+.newsletter {
+  margin: 5% 20%;
+}
+
+.contactusform {
+  display: flex;
+  margin-top: 8%;
+  justify-content: center;
+  background-color: cadetblue;
+}
+
+.services {
+  margin-top: 15%;
+  margin-left: 15%;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 450px;
+  padding: 1.3rem;
+  min-height: 100px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 40%;
+  top: 40%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.btn-close {
+  transform: translate(10px, -20px);
+  padding: 0.5rem 0.7rem;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* media queries for smaller screens */
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 8rem 2rem;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .col-12 {
+    background-color: #FAEBD7;
+  }
+}
+
+@media screen and (max-width:770px) {
+  .picture {
+    margin-left: 130%;
+  }
+}
+
+@media screen and (max-width:770px) {
+  .picture img {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*slide in code*/
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.left {
+  transform-origin: left center;
+  transform: translateX(-50%);
+}
+
+.slide-in {
+  opacity: 1 !important;
+  transform: translateX(0);
+}
