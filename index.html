@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> $bgcolor:cadetblue; $headinclr:023b6d;
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -26,7 +26,7 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products/singleproducts.html">Products</a>
+              <a class="nav-link" href="projects/project.html">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">About Us</a>
@@ -53,7 +53,7 @@
     </section>
     <div class="container">
       <div class="picture">
-        <img src="media/aboutme.jpg" alt="">
+        <img src="media/me.jpg" alt="">
       </div>
       <div class="d-flex flex-column">
         <div class="col-12 col-lg-6 col-x1-12">
@@ -83,7 +83,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4">
-            <img id="img1" src="img1.jpg" class="card-img-top">
+            <img id="img1" src="media/img1.png" class="card-img-top">
             <div class="card-body d-grid gap-2">
               <h5 class="mt-4 mb-4 card-title">Project 1</h5>
               <p class="card-text">This project is my personal portfolio which has my skills, education,and my work experience.</p>
@@ -94,22 +94,22 @@
 
         <div class="col-md-4">
           <div class="card mb-4">
-            <img id="img2" src="img2.jpg" class="card-img-top">
+            <img id="img2" src="media/img2.png" class="card-img-top">
             <div class="card-body d-grid gap-2">
               <h5 class="mt-4 mb-4 card-title">Project 2</h5>
               <p class="card-text">This project is a general knowledge quiz which has 3 questions. It is using HTML,CSS and JQuery.</p>
-              <a href="#" type="button" class="btn btn-primary mt-4 mb-4">Read More</a>
+              <a href="https://github.com/amanatla05/quiz" type="button" class="btn btn-primary mt-4 mb-4" target ="_blank">Read More</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="card mb-4">
-            <img id="img3" src="img3.jpg" class="card-img-top">
+            <img id="img3" src="media/img3.jpg" class="card-img-top">
             <div class="card-body d-grid gap-2">
               <h5 class="mt-4 mb-4 card-title">Project 3</h5>
-              <p class="card-text">This project has a list creating function using which users can create lists,add,and remove items from list.</p>
-              <a href="#" type="button" class="btn btn-primary mt-4 mb-4">Read More</a>
+              <p class="card-text">This project is a calculator. In this I used HTML,CSS,and Javascript.</p>
+              <a href="https://github.com/amanatla05/Calculator" type="button" class="btn btn-primary mt-4 mb-4">Read More</a>
             </div>
           </div>
         </div>
@@ -139,20 +139,28 @@
       <div class="overlay hidden"></div>
       <button class="btn btn-open">Subscribe to our Newsletter!</button>
       <div class="contactusform">
-        <form action="example.html" method="get" class="contact">
+        <div id="form-submitted-msg">Form successfully submitted!</div>
+        <form action="example.html" method="post" onsubmit= "return validateForm()" class="contact">
           <h1>Contact Us</h1>
           <label for="firstname">First name:</label><br>
-          <input type="text" id="firstname" placeholder="John"><br><br>
+          <input type="text" id="firstname" placeholder="John" oninput= "checkFormValidity('firstname')" required><br><br>
+           <p id="fnameError" class="error"></p>
+
           <label for="lastname">Last name:</label><br>
-          <input type="text" id="lastname" placeholder="Doe"><br><br>
+          <input type="text" id="lastname" placeholder="Doe" oninput= "checkFormValidity('lastname')" required><br><br>
+           <p id="lnameError" class="error"></p>
+
           <label for="email">Email address:</label><br>
-          <input type="email" id="email" placeholder="johndoe@yahoo.com"><br><br>
+          <input type="email" id="email" placeholder="johndoe@yahoo.com" oninput= "checkFormValidity('email')" required><br><br>
+           <p id="emailError" class="error"></p>
+
           <label for="contactno">Contact number:</label><br>
-          <input type="tel" id="contactno" placeholder="305-788-8894"><br><br>
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="3" cols="30" placeholder="Type you message here..">
+          <input type="tel" id="contactno" placeholder="305-788-8894" oninput= "checkFormValidity('contactno')" required><br><br>
+           <p id="phoneError" class="error"></p>
+          
+          <textarea id="message" name="message" rows="3" cols="30" placeholder="Type you message here.">
           </textarea><br>
-          <input type="submit">
+         <input type="submit" value="Submit" id="submitButton" disabled>
         </form>
       </div>
     </footer>

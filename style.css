@@ -20,6 +20,10 @@ h2 {
   color: #023b6d;
 }
 
+.container{
+  margin-top: 15%;
+}
+
 .template-card {
   padding: 3rem;
 }
@@ -308,3 +312,23 @@ button {
   opacity: 1 !important;
   transform: translateX(0);
 }
+
+input:invalid {
+  border: 2px solid red;
+}
+
+#form-submitted-msg {
+  margin-bottom: 3rem;
+  border-radius: 3px;
+  background-color: rgb(67, 161, 67);
+  height: 5%;
+  padding: 0.5rem;
+  width: 15%;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+
+ .error {
+            color: red;
+        }
