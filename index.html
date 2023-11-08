@@ -163,8 +163,18 @@
          <input type="submit" value="Submit" id="submitButton" disabled>
         </form>
       </div>
+      <h2>Location:</h2>
+      <div id="map" style="width: 600px; height: 400px;"></div>
+      <div>
+        <label>Origin</label>
+        <input id="origin" type="textbox">
+        <label>Destination</label>
+        <input id="destination" type="textbox">
+        <input type="button" value="Search Route" onclick="calcRoute()">
+      </div>
     </footer>
   </main>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl7rWzHRcDUjOBPt8WMMBL_FFbdpT3rjk&callback=initMap&v=weekly" defer></script>
   <script src="script.js"></script>
 </body>
 

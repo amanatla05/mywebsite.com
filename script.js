@@ -116,3 +116,38 @@ function validateForm(event) {
 
 const form = document.querySelector('.contact');
 form.addEventListener('submit', validateForm);
+
+let directionsService;
+    let directionsRenderer
+    let map;
+    // Initialize and add the map
+    function initMap() {
+      directionsService = new google.maps.DirectionsService();
+      directionsRenderer = new google.maps.DirectionsRenderer();
+      const coordinates = {
+        lat: 43.2603371,
+        lng: 80.2628072
+      };
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: coordinates,
+      });
+      directionsRenderer.setMap(map);
+    }
+
+    function calcRoute() {
+      let start = document.getElementById('origin').value;
+      let end = document.getElementById('destination').value;
+      let request = {
+        origin: start,
+        destination: end,
+        travelMode: 'DRIVING'
+      };
+      directionsService.route(request, function(result, status) {
+        if(status == 'OK') {
+          directionsRenderer.setDirections(result);
+        } else {
+          alert("An unexpected error occurred")
+        }
+      });
+    }
